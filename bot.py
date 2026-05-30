@@ -93,7 +93,7 @@ def reset_daily(u):
 def ask_ai(prompt, system="Ты репетитор ЕНТ Казахстан. Отвечай кратко по-русски."):
     client = OpenAI(api_key=TW_KEY, base_url=TW_URL)
     r = client.chat.completions.create(
-        model="deepseek-ai/DeepSeek-V3",
+        model="gpt-4o",
         messages=[{"role": "system", "content": system}, {"role": "user", "content": prompt}],
         max_tokens=600
     )
